@@ -44,11 +44,11 @@
                     <ul class="nav navbar-nav">
                     @if (Auth::check())
                     <li><a href="{{ url('/home') }}">Dashboard</a></li>
-                    <li><a href="{{ route('authors.index') }}">Penulis</a></li>
                     
                     @endif
                     @role('admin')
-                    <li><a href="{{ route('authors.index') }}">Penulis</li>
+                    <li><a href="{{ route('authors.index') }}">Penulis</a></li>
+                    <li><a href="{{ route('books.index' }}">Buku</a></li>
                     @endrole
                         &nbsp;
                     </ul>
@@ -95,6 +95,7 @@
     <script src="/js/bootstrap.min"></script>
     <script src="/js/jquery.dataTables.min.js"></script>
     <script src="/js/dataTables.bootstrap.min.js"></script>
+    <script src="/js/custom.js"></script>
 
     @yield('scripts')
 
